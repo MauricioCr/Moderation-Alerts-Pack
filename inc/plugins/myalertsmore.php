@@ -210,7 +210,7 @@ $plugins->add_hook('global_start', 'myalertsmore_register_formatters');
 function myalertsmore_register_formatters()
 {
 	global $mybb, $lang;
-	
+	$lang->load('myalertsmore', false, true);
 	if (class_exists('MybbStuff_MyAlerts_AlertFormatterManager')) {
 	    $formatterManager = MybbStuff_MyAlerts_AlertFormatterManager::getInstance();
 	
